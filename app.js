@@ -4,8 +4,6 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 
 var ENCRYPTION_KEY = "xyz123";
-var CLIENT_ID = "1f7a151f3b694598bc1e9d5662390454";
-var CLIENT_SECRET = "77b835535aea4deea24812ff3e5565e2";
 
 int_encoder.alphabet();
 
@@ -62,7 +60,7 @@ app.get("/login", function(req, res){
         return res.json(400, {error:"Missing 'username' query parameter"});
     }
 
-    // Just encrypt our username as the app OAuth access token
+    // Just encrypt our username as the app OAuth access token for simplicity.
     res.json({ access_token : generate_randomized_user_code(req.query.username) });
 });
 
@@ -75,7 +73,7 @@ app.get("/generate_oauth_code", function(req, res){
 
     try
     {
-        var username = decrypt_randomized_user_code(req.query.code); // Decrypt the username from the access_token
+        var username = decrypt_randomized_user_code(req.query.access_token); // Decrypt the username from the access_token
     }
     catch(e)
     {
@@ -115,7 +113,6 @@ app.post("/oauth/token", function(req, res){
 // ****************** END OAUTH SERVER ******************
 
 // ****************** START IFTTT API ******************
-
 app.get("/ifttt/v1/user/info", function(req, res){
 
     var bearer_token = req.header("Authorization").split(" ")[1];
@@ -136,7 +133,6 @@ app.get("/ifttt/v1/user/info", function(req, res){
         }
     });
 });
-
 // ****************** END IFTTT API ******************
 
 var server = app.listen(process.env.PORT || 3000, function () {
