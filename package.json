@@ -11,8 +11,6 @@
   "dependencies": {
     "body-parser": "^1.13.2",
     "express": "^4.13.1",
-    "int-encoder": "^0.1.4",
-    "simple-oauth-server": "^1.0.4",
-    "uuid": "^2.0.1"
+    "int-encoder": "^0.1.4"
   }
 }
