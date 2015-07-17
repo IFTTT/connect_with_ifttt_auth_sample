@@ -1,0 +1,18 @@
+{
+  "name": "ifttt_connect_auth_test",
+  "version": "1.0.0",
+  "description": "An server application for testing Connect with IFTTT.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jim Heising <jim@ifttt.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "int-encoder": "^0.1.4",
+    "simple-oauth-server": "^1.0.4",
+    "uuid": "^2.0.1"
+  }
+}
