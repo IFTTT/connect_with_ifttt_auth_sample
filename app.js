@@ -64,6 +64,7 @@ app.get("/login", function(req, res){
     res.json({ access_token : generate_randomized_user_code(req.query.username) });
 });
 
+// ****************** YOU WILL NEED TO IMPLEMENT SOMETHING LIKE THIS ******************
 app.get("/generate_oauth_code", function(req, res){
 
     if(!req.query.access_token)
