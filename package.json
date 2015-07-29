@@ -1,5 +1,5 @@
 {
-  "name": "ifttt_connect_auth_test",
+  "name": "ifttt_connect_auth_sample",
   "version": "1.0.0",
   "description": "An server application for testing Connect with IFTTT.",
   "main": "app.js",

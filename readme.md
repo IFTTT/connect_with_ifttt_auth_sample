@@ -1,4 +1,12 @@
+# Connect with IFTTT Auth Server Sample
+
 A **fake** OAuth2 server, mobile API and IFTTT Channel to demonstrate how to implement the server side portion of the Connect with IFTTT SDK.
+
+### To Run
+
+`> node app`
+
+### Endpoints
 
 `app.get("/login", function(req, res)` - This should be considered something that most apps would already have implemented in a private API to authenticate users of an existing mobile application.
 This function essentially simulates generating some sort of token that is used for private API access. It might be OAuth based, but it might not be.
